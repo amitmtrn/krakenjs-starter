@@ -1,0 +1,21 @@
+{
+  "name": "kraken-starter",
+  "version": "0.0.0",
+  "description": "a kraken js starter kit",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amitmtrn/krakenjs-starter"
+  },
+  "license": "DBAD",
+  "dependencies": {
+    "cors": "^2.8.0",
+    "express": "^4.14.0",
+    "kraken-js": "^2.1.0",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {}
+}

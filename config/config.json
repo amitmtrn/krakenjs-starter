@@ -1,0 +1,49 @@
+{
+    "middleware": {
+        "compress": {
+            "enabled": true,
+            "module": {
+                "name": "compression",
+                "arguments": [{
+                    "threshold": 512
+                }]
+            }
+        },
+        "appsec": {
+            "module": {
+                "arguments": [{
+                    "xframe": "SAMEORIGIN",
+                    "p3p": false,
+                    "csp": false
+                }]
+            }
+        },
+        "csrf": {
+            "enabled": false,
+            "priority": 111,
+            "route": "/*",
+            "module": {
+                "name": "lusca",
+                "method": "csrf",
+                "arguments": [{}]
+            }
+        },
+        "cors": {
+            "enabled": true,
+            "priority": 119,
+            "module": {
+                "name": "path:./lib/cors",
+                "arguments": [{
+                    "origin": ["http://localhost:8080"]
+                }]
+            }
+        },
+        "router": {
+            "module": {
+                "arguments": [{
+                    "directory": "path:./controllers"
+                }]
+            }
+        }
+    }
+}
